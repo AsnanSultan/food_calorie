@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:food_cal/homeScreen.dart';
 import 'package:food_cal/signup.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -25,7 +26,7 @@ class _LoginScreenState extends State<LoginScreen> {
             width: MediaQuery.of(context).size.width,
             height: 300,
             child: Image.asset(
-              "assets/loginImage.png",
+              "assets/loginPic.jpeg",
             ),
           ),
           Container(
@@ -92,7 +93,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 40,
                         width: 180,
                         child: ElevatedButton(
-                          onPressed: () => {},
+                          onPressed: () => {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyHomeScreen())),
+                          },
                           style: ElevatedButton.styleFrom(
                             primary: Colors.lightBlueAccent,
                             shape: RoundedRectangleBorder(

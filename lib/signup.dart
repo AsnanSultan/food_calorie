@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'homeScreen.dart';
 import 'login.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -172,7 +173,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             height: 40,
                             width: 180,
                             child: ElevatedButton(
-                              onPressed: () => {},
+                              onPressed: () => {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => MyHomeScreen()))
+                              },
                               style: ElevatedButton.styleFrom(
                                 primary: Colors.blue,
                                 shape: RoundedRectangleBorder(
